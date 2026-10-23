@@ -7,9 +7,9 @@ namespace Enzo_calculatrice
     public partial class MainWindow : Window
     {
         // variables
-        int no1 = 0;
-        int no2 = 0;
-        int result = 0;
+        double no1 = 0;
+        double no2 = 0;
+        double result = 0;
         Char opp = 'a';
 
         public MainWindow()
@@ -58,34 +58,34 @@ namespace Enzo_calculatrice
         }
         public void BTN_Plus_Click(object sender, RoutedEventArgs e)
         {
-            no1 = int.Parse(TB_Display.Text);
+            no1 = double.Parse(TB_Display.Text);
             opp = '+';
             TB_Display.Text = "";
         }
         public void BTN_moin_Click(object sender, RoutedEventArgs e)
         {
-            no1 = int.Parse(TB_Display.Text);
+            no1 = double.Parse(TB_Display.Text);
             opp = '-';
             TB_Display.Text = "";
         }
 
         public void BTN_fois_Click(object sender, RoutedEventArgs e)
         {
-            no1 = int.Parse(TB_Display.Text);
+            no1 = double.Parse(TB_Display.Text);
             opp = '*';
             TB_Display.Text = "";
         }
 
         public void BTN_div_Click(object sender, RoutedEventArgs e)
         {
-            no1 = int.Parse(TB_Display.Text);
+            no1 = double.Parse(TB_Display.Text);
             opp = '/';
             TB_Display.Text = "";
         }
 
         public void BTN_egale_Click(object sender, RoutedEventArgs e)
         {
-            no2 = int.Parse(TB_Display.Text);
+            no2 = double.Parse(TB_Display.Text);
             if (opp == '+')
             {
                 result = no1 + no2;
@@ -97,7 +97,10 @@ namespace Enzo_calculatrice
                 TB_Display.Text = result.ToString();
             }
             else if (opp == '*')
+            {
                 result = no1 * no2;
+                TB_Display.Text = result.ToString();
+                    }
             else if (opp == '/')
                 if (no2 != 0)
                 {
@@ -129,7 +132,10 @@ namespace Enzo_calculatrice
 
         private void BTN_virgule_Click(object sender, RoutedEventArgs e)
         {
-            display_num(",");
+            if (!TB_Display.Text.Contains(","))
+            {
+                display_num(",");
+            }
         }
     }
 }
