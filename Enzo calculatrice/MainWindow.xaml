@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Enzo_calculatrice"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="900">
     <Grid>
         <Grid.Resources>
             <Style TargetType="{x:Type Button}">
@@ -30,9 +30,11 @@
             </Style>
         </Grid.Resources>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="150"/>
+            <ColumnDefinition Width="150"/>
+            <ColumnDefinition Width="150"/>
+            <ColumnDefinition Width="150"/>
+            <ColumnDefinition Width="150"/>
             <ColumnDefinition Width="150"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>

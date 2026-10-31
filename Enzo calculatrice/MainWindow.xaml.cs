@@ -16,74 +16,74 @@ namespace Enzo_calculatrice
         {
             InitializeComponent();
         }
-        public void BTN_1_Click(object sender, RoutedEventArgs e)
+        private void BTN_1_Click(object sender, RoutedEventArgs e)
         {
             display_num("1");
         }
-        public void BTN_2_Click(object sender, RoutedEventArgs e)
+        private void BTN_2_Click(object sender, RoutedEventArgs e)
         {
             display_num("2");
         }
-        public void BTN_3_Click(object sender, RoutedEventArgs e)
+        private void BTN_3_Click(object sender, RoutedEventArgs e)
         {
             display_num("3");
         }
-        public void BTN_4_Click(object sender, RoutedEventArgs e)
+        private void BTN_4_Click(object sender, RoutedEventArgs e)
         {
             display_num("4");
         }
-        public void BTN_5_Click(object sender, RoutedEventArgs e)
+        private void BTN_5_Click(object sender, RoutedEventArgs e)
         {
             display_num("5");
         }
-        public void BTN_6_Click(object sender, RoutedEventArgs e)
+        private void BTN_6_Click(object sender, RoutedEventArgs e)
         {
             display_num("6");
         }
-        public void BTN_7_Click(object sender, RoutedEventArgs e)
+        private void BTN_7_Click(object sender, RoutedEventArgs e)
         {
             display_num("7");
         }
-        public void BTN_8_Click(object sender, RoutedEventArgs e)
+        private void BTN_8_Click(object sender, RoutedEventArgs e)
         {
             display_num("8");
         }
-        public void BTN_9_Click(object sender, RoutedEventArgs e)
+        private void BTN_9_Click(object sender, RoutedEventArgs e)
         {
             display_num("9");
         }
-        public void BTN_0_Click(object sender, RoutedEventArgs e)
+        private void BTN_0_Click(object sender, RoutedEventArgs e)
         {
             display_num("0");
         }
-        public void BTN_Plus_Click(object sender, RoutedEventArgs e)
+        private void BTN_Plus_Click(object sender, RoutedEventArgs e)
         {
             no1 = double.Parse(TB_Display.Text);
             opp = '+';
             TB_Display.Text = "";
         }
-        public void BTN_moin_Click(object sender, RoutedEventArgs e)
+        private void BTN_moin_Click(object sender, RoutedEventArgs e)
         {
             no1 = double.Parse(TB_Display.Text);
             opp = '-';
             TB_Display.Text = "";
         }
 
-        public void BTN_fois_Click(object sender, RoutedEventArgs e)
+        private void BTN_fois_Click(object sender, RoutedEventArgs e)
         {
             no1 = double.Parse(TB_Display.Text);
             opp = '*';
             TB_Display.Text = "";
         }
 
-        public void BTN_div_Click(object sender, RoutedEventArgs e)
+        private void BTN_div_Click(object sender, RoutedEventArgs e)
         {
             no1 = double.Parse(TB_Display.Text);
             opp = '/';
             TB_Display.Text = "";
         }
 
-        public void BTN_egale_Click(object sender, RoutedEventArgs e)
+        private void BTN_egale_Click(object sender, RoutedEventArgs e)
         {
             no2 = double.Parse(TB_Display.Text);
             if (opp == '+')
@@ -113,7 +113,7 @@ namespace Enzo_calculatrice
                 }
         }
 
-        public void BTN_CLR_Click(object sender, RoutedEventArgs e)
+        private void BTN_CLR_Click(object sender, RoutedEventArgs e)
         {
             TB_Display.Text = "";
         }
@@ -137,5 +137,62 @@ namespace Enzo_calculatrice
                 display_num(",");
             }
         }
-    }
+        private void BTN_Racine_Click(object sender, RoutedEventArgs e)
+        {
+            if (TB_Display.Text. Contains("√"))
+            {
+                display_num("√");
+            }
+        }
+        private void BTN_pourcent_Click(object sender, RoutedEventArgs e)
+        {
+            if (TB_Display.Text.Contains("%"))
+            {
+                display_num("%");
+            }
+        }
+        private void BTN_exponentielle_Click(object sender, RoutedEventArgs e)
+        {
+            if (TB_Display.Text.Contains("^"))
+            {
+                display_num("^");
+            }
+        }
+        private void BTN_Log_Click(object sender, RoutedEventArgs e)
+        {
+            if (TB_Display.Text.Contains("log"))
+            {
+                display_num("log");
+            }
+        }
+        private void BTN_cos_Click(object sender, RoutedEventArgs e)
+        {
+            if (TB_Display.Text.Contains("cos"))
+            {
+                display_num("cos");
+            }
+        }
+        private void BTN_Tan_Click(object sender, RoutedEventArgs e)
+        {
+            if (TB_Display.Text.Contains("tan"))
+            {
+                display_num("tan");
+            }
+        }
+        private void BTN_Sin_Click(object sender, RoutedEventArgs e)
+        {
+            if (TB_Display.Text.Contains("sin"))
+            {
+                display_num("sin");
+            }
+        }
+        private void BTN_Carre_Click(object sender, RoutedEventArgs e)
+        {
+            if (TB_Display.Text.Contains("x²"))
+            {
+                display_num("x²");
+            }
+        }
+        
+    }       
 }
