@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Windows;
 using System.Windows.Controls;
 
@@ -193,6 +193,9 @@ namespace Enzo_calculatrice
                 display_num("x²");
             }
         }
-        
+        private void BTN_egale_Click_ (object sender , RoutedEventArgs e)
+        {
+            no2 = double.Parse(TB_Display.Text);
+        }
     }       
 }
