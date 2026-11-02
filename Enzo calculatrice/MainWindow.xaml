@@ -1,4 +1,4 @@
-﻿<Window x:Class="Enzo_calculatrice.MainWindow"
+<Window x:Class="Enzo_calculatrice.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -49,17 +49,33 @@
         <Button Grid.Row="1" Grid.Column="1" Name="BTN_2" Content="2" Click="BTN_2_Click" />
         <Button Grid.Row="1" Grid.Column="2" Name="BTN_3" Content="3" Click="BTN_3_Click" />
         <Button Grid.Row="1" Grid.Column="3" Name="BTN_Plus" Style="{StaticResource Mystyle}" Content="+" Click="BTN_Plus_Click"/>
+        <Button Grid.Row="1" Grid.Column="4" Name="BTN_Carre" Style="{StaticResource Mystyle}" Content="x²" Click="BTN_Carre_Click"/>
+        <Button Grid.Row="1" Grid.Column="5" Name="BTN_Racine" Style="{StaticResource Mystyle}" Content="√" Click="BTN_Racine_Click"/>
         <Button Grid.Row="2" Grid.Column="0" Name="BTN_4" Content="4" Click="BTN_4_Click" />
         <Button Grid.Row="2" Grid.Column="1" Name="BTN_5" Content="5" Click="BTN_5_Click" />
         <Button Grid.Row="2" Grid.Column="2" Name="BTN_6" Content="6" Click="BTN_6_Click" />
         <Button Grid.Row="2" Grid.Column="3" Name="BTN_moin" Style="{StaticResource Mystyle }" Content="-" Click="BTN_moin_Click"/>
+        <Grid  Grid.Row="2" Grid.Column="4" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Button Grid.Column="0" Name="BTN_cos" Style="{StaticResource Mystyle}" Content="cos" Click="BTN_cos_Click"/>
+            <Button Grid.Column="1" Name="BTN_sin" Style="{StaticResource Mystyle}" Content="sin" Click="BTN_sin_Click"/>
+        </Grid>
+        
+
+        <Button Grid.Row="2" Grid.Column="5" Name="BTN_log" Style="{StaticResource Mystyle}" Content="log" Click="BTN_log_Click"/>
         <Button Grid.Row="3" Grid.Column="0" Name="BTN_7" Content="7" Click="BTN_7_Click" />
         <Button Grid.Row="3" Grid.Column="1" Name="BTN_8" Content="8" Click="BTN_8_Click" />
         <Button Grid.Row="3" Grid.Column="2" Name="BTN_9" Content="9" Click="BTN_9_Click" />
         <Button Grid.Row="3" Grid.Column="3" Name="BTN_fois" Style="{StaticResource Mystyle }" Content="*" Click="BTN_fois_Click"/>
+        <Button Grid.Row="3" Grid.Column="4" Name="BTN_Tan" Style="{StaticResource Mystyle}" Content="Tan" Click="BTN_Tan_Click"/>
+        <Button Grid.Row="3" Grid.Column="5" Name="BTN_exp" Style="{StaticResource Mystyle}" Content="exp" Click="BTN_exp_Click"/>
         <Button Grid.Row="4" Grid.Column="0" Name="BTN_0"  Content="0" Click="BTN_0_Click" />
         <Button Grid.Row="4" Grid.Column="1" Name="BTN_CLR" Style="{StaticResource Mystyle }" Content="CLR" Click="BTN_CLR_Click" />
         <Button Grid.Row="4" Grid.Column="2" Name="BTN_egale" Style="{StaticResource Mystyle }" Content="=" Click="BTN_egale_Click" />
+        <Button Grid.Row="4" Grid.Column="4" Name="BTN_pourcent" Style="{StaticResource Mystyle}" Content="%" Click="BTN_pourcent_Click"/>
         <Grid  Grid.Row="4" Grid.Column="3" >
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
@@ -68,6 +84,7 @@
             <Button Grid.Column="0" Name="BTN_div" Style="{StaticResource Mystyle }" Content="/" Click="BTN_div_Click" />
             <Button Grid.Column="1" Name="BTN_virgule" Style="{StaticResource Mystyle }" Content="," Click="BTN_virgule_Click" />
         </Grid>
+             
     </Grid>
    
 </Window>
